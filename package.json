@@ -1,7 +1,6 @@
 {
   "name": "@metamask/test-dapp",
   "version": "8.13.0",
-  "type": "module",
   "description": "A simple dapp used in MetaMask e2e tests.",
   "engines": {
     "node": ">= 18.0.0"
