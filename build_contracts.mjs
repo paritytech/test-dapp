@@ -34,6 +34,6 @@ for (const { keypath, contract, file } of input) {
 
   const entry = out.contracts[file][contract];
   json[`${keypath}Abi`] = entry.abi;
-  json[`${keypath}bytecode`] = entry.evm.bytecode.object;
+  json[`${keypath}Bytecode`] = entry.evm.bytecode.object;
 }
 writeFileSync('src/constants.json', JSON.stringify(json, null, 2));
