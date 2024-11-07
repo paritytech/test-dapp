@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
-import 'base64-sol/base64.sol';
+import "base64-sol/base64.sol";
 
 contract TestDappNFTs is ERC721 {
-  
+
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
@@ -26,7 +26,7 @@ contract TestDappNFTs is ERC721 {
   }
 
   function tokenURI(uint tokenId) public pure override returns (string memory) {
-    string memory svg = 
+    string memory svg =
     '<svg height="350" width="350" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">'
     '<defs>'
     '<path id="MyPath" fill="none" stroke="red" '
@@ -42,11 +42,11 @@ contract TestDappNFTs is ERC721 {
     string memory json = string(
       abi.encodePacked(
         '{"name": "Test Dapp NFTs #',
-        Strings.toString(tokenId), 
+        Strings.toString(tokenId),
         '", "description": "Test Dapp NFTs for testing.", "image": "data:image/svg+xml;base64,',
         Base64.encode(bytes(svg)),
         '", "attributes": [{"trait_type": "Token Id", "value": "',
-        Strings.toString(tokenId), 
+        Strings.toString(tokenId),
         '"}]}'
       )
     );
@@ -60,3 +60,4 @@ contract TestDappNFTs is ERC721 {
     return uri;
   }
 }
+

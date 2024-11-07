@@ -1,11 +1,12 @@
-pragma solidity ^0.4.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 contract PiggyBank {
 
     uint private balance;
     address public owner;
 
-    function PiggyBank() public {
+    constructor() {
         owner = msg.sender;
         balance = 0;
     }
@@ -19,7 +20,9 @@ contract PiggyBank {
         require(msg.sender == owner);
         balance -= withdrawAmount;
 
-        msg.sender.transfer(withdrawAmount);
+        // Use call to transfer Ether
+        (bool success, ) = payable(msg.sender).call{value: withdrawAmount}("");
+        require(success, "Transfer failed");
 
         return balance;
     }
