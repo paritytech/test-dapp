@@ -10,10 +10,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract MyToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
 
-    constructor(address initialOwner)
+    constructor()
         ERC721("MyToken", "MTK")
-        Ownable(initialOwner)
-    {}
+        Ownable()
+    {
+      transferOwnership(msg.sender);
+    }
 
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _nextTokenId++;
