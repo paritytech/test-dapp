@@ -12,7 +12,7 @@ contract MyToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
     constructor()
         ERC721("MyToken", "MTK")
-        Ownable()
+        Ownable(msg.sender)
     {
       transferOwnership(msg.sender);
     }

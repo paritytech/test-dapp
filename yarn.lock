@@ -912,14 +912,15 @@
   resolved "https://registry.npmjs.org/@openzeppelin/contracts/-/contracts-5.1.0.tgz"
   integrity sha512-p1ULhl7BXzjjbha5aqst+QMLY+4/LCWADXOCsmLHRM77AqiPjnd9vvUN9sosUfhL9JGKpZ0TjEGxgvnizmWGSA==
 
-"@parity/revive@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@parity/revive/-/revive-0.0.4.tgz"
-  integrity sha512-byAov9OxCeb60uV5nBPOyzw/8witAFg4GXiHaaoW631zKxnnq6ER7gayVeBE8OCYxm8v0NpoMMFg4rJLlWGSIA==
+"@parity/revive@latest":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@parity/revive/-/revive-0.0.21.tgz#248580dde2374b75c7c43759adc8aa2228602246"
+  integrity sha512-D1GCsw+wJ42P9XND1ZNPxeY7dnbKtLn1Zcqwe7JOXo1c3+BIx+YOnrtJKlZ0kWBVBpeH5XlRFzv58EUsBIEu9w==
   dependencies:
     "@types/node" "^22.9.0"
+    commander "^13.1.0"
     package-json "^10.0.1"
-    solc "^0.8.28"
+    solc "^0.8.29"
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -2588,6 +2589,11 @@ commander@^10.0.1:
   version "10.0.1"
   resolved "https://registry.npmjs.org/commander/-/commander-10.0.1.tgz"
   integrity sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==
+
+commander@^13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-13.1.0.tgz#776167db68c78f38dcce1f9b8d7b8b9a488abf46"
+  integrity sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==
 
 commander@^2.18.0, commander@^2.20.0, commander@^2.20.3:
   version "2.20.3"
@@ -6194,10 +6200,10 @@ socks@^2.6.2:
     ip "^2.0.0"
     smart-buffer "^4.2.0"
 
-solc@^0.8.28:
-  version "0.8.28"
-  resolved "https://registry.npmjs.org/solc/-/solc-0.8.28.tgz"
-  integrity sha512-AFCiJ+b4RosyyNhnfdVH4ZR1+TxiL91iluPjw0EJslIu4LXGM9NYqi2z5y8TqochC4tcH9QsHfwWhOIC9jPDKA==
+solc@^0.8.29:
+  version "0.8.29"
+  resolved "https://registry.yarnpkg.com/solc/-/solc-0.8.29.tgz#ec8fc1859a17ba60e7eed19ff4c9f90fc9abd23e"
+  integrity sha512-M1hmcsejAtT1RWC+wy45Oi8a82nSnDl65wDzA3/8uWTC7R7VcnrMVIHv6/LHqnQPZ7OM2RIeKh3zpNo4E5lYbw==
   dependencies:
     command-exists "^1.2.8"
     commander "^8.1.0"
